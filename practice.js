@@ -1,47 +1,44 @@
+
+function larger(num1, num2) {
+  if (num1 > num2) {
+    return num1
+  }
+  return num2
+}
+//--------------/ Alternate helper
+// function larger(num1, num2, preference) {
+// if (preference === "larger") {
+//   return Math.max(num1, num2);
+// } else {
+//   return Math.min(num1, num2);
+// }
+// }
+//-------------------
 function multiplyBiggerNumByTwo(num1, num2) {
-  let bigNum;
-  if (num1 > num2) {
-    bigNum = num1;
-    return bigNum * 2;
-  } else {
-    bigNum = num2;
-    return bigNum * 2;
-  }
+  return larger(num1, num2) * 2
 }
-
+//--------------------------------------------------------
 function divideBiggerNumByThree(num1, num2) {
-  let bigNum;
-  if (num1 > num2) {
-    bigNum = num1;
-    return bigNum / 3;
-  } else {
-    bigNum = num2;
-    return bigNum / 3;
-  }
+  return larger(num1, num2) / 3
 }
-
+//---------------------------------------------------------
 function eatMostTacos(sum1, sum2) {
-  let bigNum;
-  if (sum1 > sum2) {
-    bigNum = sum1;
+  let bigNum = larger(sum1, sum2)
     return `I ate ${bigNum} tacos.`;
-  } else {
-    bigNum = sum2;
-    return `I ate ${bigNum} tacos.`;
-  }
-}
 
+}
+//----------------------------------------------------------
 function adoptSmallerDog(weight1, weight2) {
-  let smallDog;
-  if (weight1 < weight2) {
-    smallDog = weight1;
+  let bigDog = larger(weight1, weight2)
+  let args = [...args]
+  let smallDog = args.find(dog => dog == !bigDog)
+
     return `I adopted a dog that weighs ${smallDog} pounds.`;
-  } else {
-    smallDog = weight2;
-    return `I adopted a dog that weighs ${smallDog} pounds.`;
-  }
+
 }
 
+adoptSmallerDog(1, 2)
+//----------------------------------------------------------
 
 /**************************************************************************/
 /* DO NOT CHANGE THE CODE BELOW */
